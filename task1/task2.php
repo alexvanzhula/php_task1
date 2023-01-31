@@ -5,77 +5,139 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+    <title>php</title>
 </head>
 <body>
-  <h1>Таблицы Истинности</h1>
-    <table>
+  <table> 
+  <caption>Таблица гибкого  сравнения</caption>
       <tr>
-      
-         <th>A</th>
-         <th>B</th>
-         <th>!A</th>
-         <th>A || B</th>
-         <th>A && B</th>
-         <th>A xor B</th>
+         <th></th>
+         <th>true</th>
+         <th>false</th>
+         <th>1</th>
+         <th>0</th>
+         <th>-1</th>
+         <th>'1'</th>
+         <th>null</th>
+         <th>'php'</th>
       </tr>
-      
-      <tr>
-      <?php 
-      $a=0;
-      $b=0;
+       <tr>
+       <?php 
+      $a = true;
       ?>
-        <th><?php echo $a;?></th>
-        <th><?php echo $b;?></th>
-        <th><?php var_dump($a);?></th>
-        <th><?php var_dump($a || $b);?></th>
-        <th><?php var_dump($a === $b);?></th>
-        <th><?php var_dump($test_array) ;?></th>
+        <th>true</th>
+        <th><?php var_dump($a==true);?></th>
+        <th><?php var_dump($a==false);?></th>
+        <th><?php var_dump($a==1);?></th>
+        <th><?php var_dump($a==0);?></th>
+        <th><?php var_dump($a==-1);?></th>
+        <th><?php var_dump($a=='1');?></th>
+        <th><?php var_dump($a==NULL);?></th>
+        <th><?php var_dump($a=='php');?></th>
      </tr>
      <tr>
-      <?php 
-      $a=0;
-      $b=1;
+       <?php 
+      $a = false;
       ?>
-        <th><?php echo $a;?></th>
-        <th><?php echo $b;?></th>
-        <th><?php var_dump($a);?></th>
-        <th><?php var_dump($a || $b);?></th>
-        <th><?php var_dump($a === $b);?></th>
-        <th><?php var_dump($test_array) ;?></th>
+        <th>false</th>
+        <th><?php var_dump($a==true);?></th>
+        <th><?php var_dump($a==false);?></th>
+        <th><?php var_dump($a==1);?></th>
+        <th><?php var_dump($a==0);?></th>
+        <th><?php var_dump($a==1);?></th>
+        <th><?php var_dump($a=='1');?></th>
+        <th><?php var_dump($a==NULL);?></th>
+        <th><?php var_dump($a=='php');?></th>
      </tr>
      <tr>
-      <?php 
-      $a=1;
-      $b=0;
+       <?php 
+      $a = 1;
       ?>
-        <th><?php echo $a;?></th>
-        <th><?php echo $b;?></th>
-        <th><?php var_dump($a);?></th>
-        <th><?php var_dump($a || $b);?></th>
-        <th><?php var_dump($a === $b);?></th>
-        <th><?php var_dump($test_array) ;?></th>
+        <th>1</th>
+        <th><?php var_dump($a==true);?></th>
+        <th><?php var_dump($a==false);?></th>
+        <th><?php var_dump($a==1);?></th>
+        <th><?php var_dump($a==0);?></th>
+        <th><?php var_dump($a==1);?></th>
+        <th><?php var_dump($a=='1');?></th>
+        <th><?php var_dump($a==NULL);?></th>
+        <th><?php var_dump($a=='php');?></th>
      </tr>
      <tr>
-      <?php 
-      $a=1;
-      $b=1;
+       <?php 
+      $a = 0;
       ?>
-        <th><?php echo $a;?></th>
-        <th><?php echo $b;?></th>
-        <th><?php var_dump($a);?></th>
-        <th><?php var_dump($a || $b);?></th>
-        <th><?php var_dump($a === $b);?></th>
-        <th><?php var_dump($test_array) ;?></th>
+        <th>0</th>
+        <th><?php var_dump($a==true);?></th>
+        <th><?php var_dump($a==false);?></th>
+        <th><?php var_dump($a==1);?></th>
+        <th><?php var_dump($a==0);?></th>
+        <th><?php var_dump($a==1);?></th>
+        <th><?php var_dump($a=='1');?></th>
+        <th><?php var_dump($a==NULL);?></th>
+        <th><?php var_dump($a=='php');?></th>
      </tr>
-...
-</table>
+     <tr>
+       <?php 
+      $a = -1;
+      ?>
+        <th>-1</th>
+        <th><?php var_dump($a==true);?></th>
+        <th><?php var_dump($a==false);?></th>
+        <th><?php var_dump($a==1);?></th>
+        <th><?php var_dump($a==0);?></th>
+        <th><?php var_dump($a==-1);?></th>
+        <th><?php var_dump($a=='1');?></th>
+        <th><?php var_dump($a==NULL);?></th>
+        <th><?php var_dump($a=='php');?></th>
+     </tr>
+     <tr>
+       <?php 
+      $a = '1';
+      ?>
+        <th>'1'</th>
+        <th><?php var_dump($a==true);?></th>
+        <th><?php var_dump($a==false);?></th>
+        <th><?php var_dump($a==1);?></th>
+        <th><?php var_dump($a==0);?></th>
+        <th><?php var_dump($a==-1);?></th>
+        <th><?php var_dump($a=='1');?></th>
+        <th><?php var_dump($a==NULL);?></th>
+        <th><?php var_dump($a=='php');?></th>
+     </tr>
+     <tr>
+       <?php 
+      $a = NULL;
+      ?>
+        <th>null</th>
+        <th><?php var_dump($a==true);?></th>
+        <th><?php var_dump($a==false);?></th>
+        <th><?php var_dump($a==1);?></th>
+        <th><?php var_dump($a==0);?></th>
+        <th><?php var_dump($a==-1);?></th>
+        <th><?php var_dump($a=='1');?></th>
+        <th><?php var_dump($a==NULL);?></th>
+        <th><?php var_dump($a=='php');?></th>
+     </tr>
+     <tr>
+       <?php 
+      $a = 'php';
+      ?>
+        <th>'php'</th>
+        <th><?php var_dump($a==true);?></th>
+        <th><?php var_dump($a==false);?></th>
+        <th><?php var_dump($a==1);?></th>
+        <th><?php var_dump($a==0);?></th>
+        <th><?php var_dump($a==-1);?></th>
+        <th><?php var_dump($a=='1');?></th>
+        <th><?php var_dump($a==NULL);?></th>
+        <th><?php var_dump($a=='php');?></th>
+     </tr> 
+  
 
-<br><br><br><br><br>
 
-
-<!-- таблица номер 2  -->
 <table> 
+  <caption>Таблица жесткого сравнения</caption>
       <tr>
          <th></th>
          <th>true</th>
@@ -199,7 +261,6 @@
         <th><?php var_dump($a===NULL);?></th>
         <th><?php var_dump($a==='php');?></th>
      </tr>
-...
 </table>
 </body>
 </html>
