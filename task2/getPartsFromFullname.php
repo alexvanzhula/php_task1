@@ -7,9 +7,9 @@ function getFullnameFromParts($example_persons_array){
    return $allFullNames;
 }
 
-function getPartsFromFullname($arrayOfNames){
+function getPartsFromFullname($allFullNames){
     $result = [];
-    foreach($arrayOfNames as $value){
+    foreach($allFullNames as $value){
         $differentNames = explode(' ',$value);
         $result[] = [
             'surname' => $differentNames[0],

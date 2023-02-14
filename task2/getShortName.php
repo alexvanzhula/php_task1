@@ -1,9 +1,9 @@
 <?php
 
 
-function getShortName ($arrayOfNames){
+function getShortName ($ArrayPartNames){
         $resultShort = [];
-        foreach ($arrayOfNames as $value) {
+        foreach ($ArrayPartNames as $value) {
             unset($value['patronomyc']);
              $temp = [
                 'surname' => substr($value['surname'], 0, -3),

@@ -1,23 +1,45 @@
- <?php
+<?php
+function getGenderFromName ($ArrayPartNames);
+$maleOrFemale = 0;
+            $maleSignPatronomyc = 'ич';
+            $maleSignName = 'н';
+            $maleSignSurname = 'в';
+            $feMaleSignPatronomyc = 'вна';
+            $feMaleSignName = 'a';
+            $feMaleSignSurname = 'ва';
+            $name = mb_substr($full_name['name'],-1, 1);
+            $surname = mb_substr($full_name['surname'],-2, 2);
+            $patronomys = mb_substr($full_name['patronomys'],-3, 3);
 
-function getPartsFromFullname ($result) {
-    $genderDiscription = 0;
-    $genderMale = 0;
-    $genderFemale = 0;
-    $name = mb_substr(['surname'][-1]);
-    $surname = mb_substr(['name'][-2]);
-    $patronomys = mb_substr(['patronomys'][-1])
-    if ($name == 'я' ||  $surname == 'ва' || $patronomys == 'вна' ) { 
-        return $genderFemale +=1;
-    } else{
-         return $genderMale +=1;   
+            if ($name == 'я') {
+                $maleOrFemale -=1;
+            }
+            if ($surname == 'ва') {
+                $maleOrFemale -=1;
+            }
+            if ($patronomys == 'вна' ) {
+                $maleOrFemale -=1;
+            }
+
+            if ($name == $maleSignName) {
+                $maleOrFemale +=1;
+            }
+            if ($surname == $maleSignSurname) {
+                $maleOrFemale +=1;
+            }
+            if ($patronomys == $maleSignSurname ) {
+                $maleOrFemale +=1;
+            }
+
+
+            if($maleOrFemale > 0){
+                echo ('мужской пол');
+            }elseif($maleOrFemale < 0){
+                echo ('женский пол');
+            }else{
+                echo ('Neutral gender');
+            }
         }
-    }
-
-      if (($genderDiscription = $genderFemale + $genderMale) > 0 ) {
-        echo ('женский пол');
-      } else {
-        echo ('мужской пол');
-      } 
 ?>
+
 

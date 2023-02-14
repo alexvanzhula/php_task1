@@ -61,17 +61,19 @@ echo "<br><br>";
 print_r($fullNames);
 
 
-$partNames = getPartsFromFullname($fullNames);
+$ArrayPartNames = getPartsFromFullname($fullNames);
 echo "<br><br> Разбиение и объединение ФИО <br><br>";
-print_r($partNames);
+print_r($ArrayPartNames);
 
 echo "<br><br> Сокращение ФИО <br>";
 
-$thirdResul = getShortName($partNames);
-print_r($thirdResul);
+$getShortNamesRes = getShortName($ArrayPartNames);
+print_r($getShortNamesRes);
 
 echo "<br><br> определение пола <br>";
-print_r($genderDiscription);
+
+var_dump($ArrayPartNames);
+$getGenderRes = getGenderFromName($ArrayPartNames);
 ?>
 </body>
 </html> 
